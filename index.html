@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futvo</title>
+
+  <!-- Fuente Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="/images/logo/logo.png" alt="Futvo" />
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="buttons">
+      <button class="btn-outline">Iniciar Sesión</button>
+      <button class="btn-filled">Registrarse</button>
+    </div>
+
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL (overlay) -->
+  <div class="mobile-menu" aria-hidden="true">
+    <ul class="mobile-nav">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+
+    <div class="mobile-buttons">
+      <button class="btn-outline">Iniciar Sesión</button>
+      <button class="btn-filled">Registrarse</button>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Conecta, juega y mejora tu nivel.</h1>
+        <p>Encuentra compañeros, partidos y canchas cerca de ti con FUTVO.</p>
+        <div class="hero-buttons">
+          <button class="btn-download">
+            <img src="images/logo_playstore.svg" alt="Google Play" />
+            Descargar app
+          </button>
+          <button class="btn-outline-big">Ver más</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- SPONSORS SECTION -->
+  <section class="sponsors">
+
+    <!-- decorative SVG background (archivo: /images/sponsors/soccer-bg.svg) -->
+    <img src="/images/fondo_pelota.svg" alt="" class="sponsors-bg" aria-hidden="true" />
+   
+    <div class="container">
+      <h2>Nuestros Sponsors</h2>
+      <p class="sponsors-text">Agradecemos el apoyo de nuestros sponsors.</p>
+      <div class="sponsors-list">
+        <img src="/images/sponsors/c8ac60_a7f15d72bc214a4a844aba7d703c96ac~mv2.avif" alt="Sponsor 1" />
+        <img src="/images/sponsors/IBM-logo.png" alt="Sponsor 2" />
+        <img src="/images/sponsors/santander-logo-gris.png" alt="Sponsor 3" />
+      </div>
+    </div>
+  </section>  
+
+  <!-- QUIENES SOMOS SECTION -->
+  <section class="about-us">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>¿Quiénes somos?</h2>
+          <p> Conecta apasionados del fútbol en ciudades peruanas, uniendo personas con momentos inolvidables. </p>
+          
+          <div class="about-features">
+            <div class="feature">
+              <h3>Comunidad Inclusiva</h3>
+              <p> Jugadores de todos los niveles conectan y disfrutan en un entorno amigable y seguro. </p>
+            </div>
+            <div class="feature">
+              <h3>Eventos y Torneos Locales</h3>
+              <p> Torneos de fútbol en ciudades peruanas con competencia sana y espíritu de equipo. </p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="/images/quienes_somos.png" alt="Jugadores en cancha de fútbol" width="933" height="622">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/scripts.js"></script>
+
+</body>
+</html>

@@ -372,7 +372,7 @@ nav {
     top: 80px; /* debajo de la navbar */
     left: 0;
     width: 100%;
-    height: 35vh; /* ocupa ~70% de la altura de la ventana */
+    height: 45vh; /* ocupa ~70% de la altura de la ventana */
     background: rgba(255,255,255,0.94);
     backdrop-filter: blur(6px);
     padding: 28px 20px;

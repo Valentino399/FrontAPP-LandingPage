@@ -42,7 +42,7 @@ img {
    NAVBAR
 =========================== */
 .navbar {
-  height: 100px;
+  height: 80px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -175,7 +175,7 @@ nav {
 =========================== */
 .hero {
   height: 894px;
-  background-image: url("/images/banner_2.png");
+  background-image: url("/images/banner_3.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -217,7 +217,7 @@ nav {
 }
 
 /* BOTONES DEL BANNER */
-.btn-download,
+.btn-registrarse,
 .btn-outline-big {
   width: 295px;
   height: 80px;
@@ -231,13 +231,13 @@ nav {
   gap: 10px;
 }
 
-.btn-download {
+.btn-registrarse {
   background: white;
   color: #222;
   border: none;
 }
 
-.btn-download img {
+.btn-registrarse img {
   width: 28px;
   height: 28px;
 }
@@ -287,7 +287,7 @@ nav {
     gap: 15px;
   }
 
-  .btn-download,
+  .btn-registrarse,
   .btn-outline-big {
     width: 80%;
     height: 70px;
@@ -356,11 +356,6 @@ nav {
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.mobile-menu.active {
-  display: flex;
-  animation: fadeIn 0.3s ease-out forwards;
 }
 
 @media (max-width: 768px) {
@@ -447,7 +442,7 @@ nav {
     gap: 10px;
   }
 
-  .btn-download,
+  .btn-registrarse,
   .btn-outline-big {
     width: 90%;
     height: 65px;
@@ -457,10 +452,10 @@ nav {
 }
 
 /* ===========================
-   SPONSORS SECTION
+   PARTNERS SECTION
 =========================== */
 
-.sponsors {
+.partners {
   padding: 60px 80px;
   text-align: center;
   position: relative;
@@ -469,14 +464,14 @@ nav {
   margin: 0;
 }
 
-.sponsors .container {
+.partners .container {
   position: relative;
   margin: 0 auto;
   z-index: 2; /* sobre el SVG */
 }
 
 /* SVG decorativo posicionado a la derecha */
-.sponsors .sponsors-bg {
+.partners .partners-bg {
   position: absolute;
   right: 0;
   top: 50%;
@@ -489,19 +484,19 @@ nav {
 }
 
 
-.sponsors h2 {
+.partners h2 {
   font-size: 56px;
   margin-bottom: 12px;
   color: #222;
 }
 
-.sponsors-text {
+.partners-text {
   margin-bottom: 24px;
   color: #666;
   font-size: 16px;
 }
 
-.sponsors-list {
+.partners-list {
   display: flex;
   gap: 24px;
   justify-content: center;
@@ -509,7 +504,7 @@ nav {
   flex-wrap: wrap;
 }
 
-.sponsors-list img {
+.partners-list img {
   width: 260px;
   height: auto;
   max-width: 100%;
@@ -518,18 +513,18 @@ nav {
   filter: grayscale(100%) opacity(0.8);
 }
 
-.sponsors-list img:hover {
+.partners-list img:hover {
   transform: scale(1.05);
   filter: grayscale(0) opacity(1);
 }
 
 @media (max-width: 768px) {
-  .sponsors { padding: 40px 1px; }
-  .sponsors-list img { width: 40%; max-width: 260px; }
+  .partners { padding: 40px 1px; }
+  .partners-list img { width: 40%; max-width: 260px; }
  }
 
 @media (max-width: 1100px) {
-  .sponsors .sponsors-bg {
+  .partners .partners-bg {
     width: 420px;     /* tamaño fijo: ajusta si prefieres otro ancho */
     max-width: none;  /* desactiva comportamiento responsive */
     right: 0;
@@ -710,6 +705,19 @@ nav {
             height: auto;
         }
 
+        /* QUE NO SE VE LA IMAGEN DE RIGHT Y LEFT MOVIL */
+
+        @media (max-width: 1200px) {
+            .bg-image-right {
+                display: none; /* Oculta en móviles si es necesario */
+            }
+        }
+
+        @media (max-width: 1600px) {
+            .bg-image-left {
+                display: none; /* Oculta en móviles si es necesario */
+            }
+        }
         @media (max-width: 992px) {
             .map-content {
                 flex-direction: column;
@@ -844,46 +852,182 @@ nav {
     }
     
 
-/* ===========================
-   SITE FOOTER
-=========================== */
+/* =========================== SITE FOOTER =========================== */
 .site-footer {
-  background: #7c4d05; 
-  color: #e6eefc;
-  padding-top: 48px;
-  margin-top: 40px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Azul noche profundo → más premium que negro puro */
+  color: #e2e8f0;
+  padding-top: 80px;
+  margin-top: 120px;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Línea superior sutil con tu naranja real (sin animación exagerada) */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: #f7a500;
+  box-shadow: 0 4px 15px rgba(247, 165, 0, 0.4);
+}
+
+/* Pelotitas decorativas sutiles en las esquinas (futbolero sin ser infantil) */
+.site-footer::after {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(247,165,0,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -140px;
+  left: -140px;
+  pointer-events: none;
+}
+
 .site-footer .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  gap: 48px;
   align-items: start;
-  padding: 0 20px 28px;
+  padding: 0 80px 64px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
+
 .site-footer h4 {
   color: #ffffff;
-  font-size: 16px;
-  margin-bottom: 12px;
+  font-size: 18px;
   font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
 }
-.site-footer p { color: #c9d6ef; line-height: 1.6; }
-.site-footer ul { list-style: none; }
-.site-footer a { color: #c9d6ef; text-decoration: none; display: inline-block; margin-bottom: 8px; }
-.site-footer a:hover { color: #f7a500; }
-.footer-col { padding-bottom: 8px; }
-.footer-app .footer-app-buttons { display:flex; gap:12px; margin-top:12px; }
-.footer-app .app-badge img { height:44px; display:block; }
 
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.04); margin-top: 20px; padding: 18px 0; }
-.footer-bottom p { opacity: 0.7; font-size: 14px; margin: 0; }
+/* Subrayado naranja elegante y estático (nada de flechas) */
+.site-footer h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 36px;
+  height: 3px;
+  background: #f7a500;
+  border-radius: 2px;
+}
 
+.site-footer p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  padding: 6px 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover limpio: solo color naranja + leve indent (sin flechas ni desplazamientos raros) */
+.site-footer a:hover {
+  color: #f7a500;
+  padding-left: 8px;
+}
+
+.footer-col {
+  padding-bottom: 8px;
+}
+
+/* Botones de app más grandes y con tu estilo de botón */
+.footer-app .footer-app-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-app .app-badge img {
+  height: 52px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.footer-app .app-badge img:hover {
+  transform: translateY(-6px);
+}
+
+/* Footer bottom más elegante */
+.footer-bottom {
+  border-top: 1px solid rgba(247, 165, 0, 0.15);
+  margin-top: 48px;
+  padding: 28px 80px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.footer-bottom p {
+  opacity: 0.8;
+  font-size: 14px;
+  color: #cbd5e1;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive (igual que antes pero más pulido) */
 @media (max-width: 992px) {
-  .site-footer .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .site-footer .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56px;
+    padding: 0 40px 64px;
+  }
+  .site-footer { padding-top: 70px; }
+  .footer-bottom { padding: 28px 40px; }
 }
 
 @media (max-width: 640px) {
-  .site-footer .footer-grid { grid-template-columns: 1fr; gap: 18px; }
-  .site-footer { padding-top: 32px; }
-  .footer-app .app-badge img { height: 40px; }
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 0 24px 56px;
+  }
+  .site-footer { 
+    padding-top: 60px; 
+    margin-top: 100px;
+  }
+  .footer-app .footer-app-buttons {
+    justify-content: center;
+  }
+  .footer-bottom {
+    padding: 24px;
+    text-align: center;
+  }
 }
+
+/* Protección extra: asegurar que el overlay móvil NUNCA se muestre en pantallas grandes
+   Esto evita casos donde la clase "active" se agregue por error y muestre los botones
+*/
+@media (min-width: 769px) {
+  .mobile-menu,
+  .mobile-menu.active {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transform: translateY(-10px) !important;
+    pointer-events: none !important;
+  }
+}
+
     
